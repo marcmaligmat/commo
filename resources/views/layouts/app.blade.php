@@ -3,7 +3,7 @@
 <head>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="SemiColonWeb" />
+	<meta name="author" content="MarcMaligmat" />
 
 	<!-- Stylesheets
 	============================================= -->
@@ -34,9 +34,7 @@
 		<!-- Header
 		============================================= -->
         @include('inc.header')
-        <!-- Slider
-		============================================= -->
-        @include('inc.slider')
+       
 		<!-- Content
 		============================================= -->
         @yield('content')

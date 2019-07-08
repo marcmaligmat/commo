@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent\Model;
 use App\Blog;
 use Illuminate\Http\Request;
-
-class BlogsController extends Controller
+use Auth;
+use DB;
+class BlogController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth','verified']);
+
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +22,7 @@ class BlogsController extends Controller
      */
     public function index()
     {
-        return view('blog.index');
+        
     }
 
     /**
@@ -24,7 +32,8 @@ class BlogsController extends Controller
      */
     public function create()
     {
-        return view('blog.create');
+        return view('blog.create')
+                ->with('user_id', Auth::user()->id);
     }
 
     /**
@@ -35,7 +44,14 @@ class BlogsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+        Blog::create([
+            'title' => strtolower($request->get('title')),
+            'body' => $request->get('body'),
+            'user_id' => $request->get('user_id'),
+        ]);
+
+        return redirect()->back();
     }
 
     /**
@@ -44,9 +60,13 @@ class BlogsController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show($title)
     {
-        //
+        $title = $this->removeDash($title);
+        //echo $title;
+        $blog =  Blog::where('title',$title)->first();
+        
+        return view('blog.show',compact('blog'));
     }
 
     /**
@@ -81,5 +101,13 @@ class BlogsController extends Controller
     public function destroy(Blog $blog)
     {
         //
+    }
+
+    public function formatDate(){
+        $this->created_at = date_format($this->created_at,"d F Y");
+    }
+
+    private function removeDash($title){
+        return str_replace('-',' ',$title);
     }
 }

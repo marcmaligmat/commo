@@ -14,11 +14,11 @@
                 @if(!empty($success))
                     <div>{{var_dump($success)}}</div>
                 @endif
-                <form enctype="multipart/form-data" action="#" method="POST">@csrf
+                <form enctype="multipart/form-data" action="{{route('blog.store')}}" method="POST">@csrf
                     <div class="form-group row">
 
                         <label for="title" class=" col-form-label  mt-1">Title</label>                                  
-                        <input type="text" class="form-control" id="title" name="id" placeholder="" ">
+                        <input type="text" class="form-control" id="title" name="title" placeholder="" ">
 
                         
                         
@@ -27,15 +27,12 @@
                             <textarea id ="ckeditor" class="form-control" name="body">
                             </textarea>
                         </div>
-                        
 
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        
                     </div>
                     <div class="mx-0 px-0">
                         <input type="submit" value="Create" class="mt-3 mx-auto btn  btn-primary" >
                     </div>
-
+                    <input type="hidden" name="user_id" value="{{$user_id}}">
                     
                 </form>
 

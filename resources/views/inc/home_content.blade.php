@@ -30,6 +30,31 @@
 				<!-- Posts
 				============================================= -->
 				<div id="posts" class="small-thumbs">
+					@foreach($blogs as $blog)
+					<div class="entry clearfix">
+						<div class="entry-image">
+							<a href="images/portfolio/full/17.jpg" data-lightbox="image"><img class="image_fade" src="images/blog/small/17.jpg" alt="Standard Post with Image"></a>
+						</div>
+						<div class="entry-c">
+							<div class="entry-title">
+								<h2><a href="/blog/posts/{{strtolower(str_replace(' ','-',$blog->title))}}">{{$blog->title}}</a></h2>
+							</div>
+							<ul class="entry-meta clearfix">
+								<li><i class="icon-calendar3"></i> {{date_format($blog->created_at,"d F Y")}}</li>
+								<li><a href="#"><i class="icon-user"></i> {{ucfirst($blog->user->name)}}</a></li>
+								<li><i class="icon-folder-open"></i> <a href="#">General</a>, <a href="#">Media</a></li>
+								<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
+								<li><a href="#"><i class="icon-camera-retro"></i></a></li>
+							</ul>
+							<div class="entry-content">
+								{!! str_limit($blog->body,300) !!}
+								<br>
+								<a href="/blog/{{strtolower(str_replace(' ','-',$blog->title))}}" class="more-link">Read More</a>
+							</div>
+						</div>
+					</div>
+					@endforeach
+
 
 					<div class="entry clearfix">
 						<div class="entry-image">

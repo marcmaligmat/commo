@@ -11,16 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 //Auth::routes();
 Auth::routes(['verify' => true]);
-
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::prefix('users')->group(function(){
+    Route::get('/','UsersController@index')->name('users.index');
+
+});
 Route::prefix('blog')->group(function(){
-    Route::get('/','BlogsController@index');
-    Route::get('/create','BlogsController@create');
+    Route::get('/posts/{title}','BlogController@show');
+    Route::get('/create','BlogController@create');
+    Route::post('/create','BlogController@store')->name('blog.store');
 });

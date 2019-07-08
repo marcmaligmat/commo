@@ -10,7 +10,7 @@
                 <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
                 <ul>
-                    <li class="current"><a href="#"><div>Home</div></a></li>
+                    <li class="current"><a href="/"><div>Home</div></a></li>
                     <li><a href="#"><div>Features</div></a></li>
                     <li><a href="#"><div>Categories</div></a></li>
                     <li><a href="#"><div>Authors</div></a></li>
@@ -36,6 +36,12 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('users.index') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('profile-form').submit();">
+                                    {{ __('Profile') }}
+                                </a>
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">

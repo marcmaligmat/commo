@@ -49,7 +49,7 @@
 							<div class="entry-content">
 								{!! str_limit($blog->body,300) !!}
 								<br>
-								<a href="/blog/{{strtolower(str_replace(' ','-',$blog->title))}}" class="more-link">Read More</a>
+								<a href="/blog/posts/{{strtolower(str_replace(' ','-',$blog->title))}}" class="more-link">Read More</a>
 							</div>
 						</div>
 					</div>

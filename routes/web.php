@@ -20,3 +20,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::prefix('blog')->group(function(){
+    Route::get('/','BlogsController@index');
+    Route::get('/create','BlogsController@create');
+});

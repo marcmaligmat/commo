@@ -37,7 +37,7 @@
 						</div>
 						<div class="entry-c">
 							<div class="entry-title">
-								<h2><a href="blog-single.html">This is a Standard post with a Preview Image</a></h2>
+								<h2><a href="/blog/how-to-1">This is a Standard post with a Preview Image</a></h2>
 							</div>
 							<ul class="entry-meta clearfix">
 								<li><i class="icon-calendar3"></i> 10th February 2014</li>

@@ -56,7 +56,7 @@
 					@endforeach
 
 
-					<div class="entry clearfix">
+					{{-- <div class="entry clearfix">
 						<div class="entry-image">
 							<a href="images/portfolio/full/17.jpg" data-lightbox="image"><img class="image_fade" src="images/blog/small/17.jpg" alt="Standard Post with Image"></a>
 						</div>
@@ -128,9 +128,9 @@
 								<a href="blog-single-small.html"class="more-link">Read More</a>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 
-					<div class="entry clearfix">
+					{{-- <div class="entry clearfix">
 						<div class="entry-c">
 							<div class="entry-image">
 								<blockquote>
@@ -146,7 +146,7 @@
 								<li><a href="#"><i class="icon-quote-left"></i></a></li>
 							</ul>
 						</div>
-					</div>
+					</div> --}}
 
 					<div class="entry clearfix">
 						<div class="entry-image clearfix">

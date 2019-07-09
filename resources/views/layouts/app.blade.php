@@ -52,6 +52,14 @@
 	<!-- External JavaScripts
 	============================================= -->
 	<script src="{{asset('js/jquery.js')}}"></script>
+
+	<!-- For Clicking photo to upload file -->
+	<script>
+			$("input[type='image']").click(function() {
+			$("input[id='my_file']").click();
+		});
+	</script>
+
 	<script src="{{asset('js/plugins.js')}}"></script>
 
 	<!-- Footer Scripts

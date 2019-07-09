@@ -11,7 +11,7 @@ class BlogController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth','verified']);
+        //$this->middleware(['auth','verified']);
 
     }
 
@@ -32,8 +32,13 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('blog.create')
+        if(!empty(Auth::user()->id)){
+            return view('blog.create')
                 ->with('user_id', Auth::user()->id);
+        } else {
+            return view('auth.login');
+        }
+        
     }
 
     /**

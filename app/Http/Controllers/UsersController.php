@@ -42,7 +42,7 @@ class UsersController extends Controller
             $fileNameToStore = time() . '.jpg'; 
 
             $source = storage_path().'/app/public/uploads/avatars/'.$fileNameToStore;
-            $target = public_path('/uploads/avatars/' . $avatar);
+            $target = public_path('/uploads/avatars/' . $fileNameToStore);
 
             dd($source, $target);
 

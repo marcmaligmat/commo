@@ -20,9 +20,11 @@ Auth::routes(['verify' => true]);
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
 Route::prefix('users')->group(function(){
     Route::get('/','UsersController@index')->name('users.index');
-    
+    Route::post('/','UsersController@edit')->name('users.update');
 });
 Route::prefix('blog')->group(function(){
     Route::get('/posts/{title}','BlogController@show');

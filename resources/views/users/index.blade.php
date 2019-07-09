@@ -17,17 +17,18 @@
 
             {{-- ****************PROFILE TAB************* --}}
 
-
+            
             <div class="tab-content clearfix" id="profile-tab">
-                <div class="">
-                    <div class="d-flex flex-wrap justify-content-center m-0 py-3 ">
-                            <input type="image" src="/storage/uploads/avatars/{{ $user->avatar }}" style="  border-radius:50%;" class=" m-0 py-3"  style="height:90px; width:90px">
-                            <input type="file" id="edit_profile_picture" style="display: none;" />
-                        <span class="col-12 text-center pt-3" ><h4>Welcome, {{ ucfirst($user->name) }} </h4></span>
+                <form enctype="multipart/form-data" action="" method="POST">@csrf
+                    <div class="">
+                        <div class="d-flex flex-wrap justify-content-center m-0 py-3 ">
+                                <input type="image" src='{{asset('/storage/uploads/avatars/'.$user->avatar)}}' style="  border-radius:50%;" class=" m-0 py-3"  style="height:90px; width:90px" onclick="event.preventDefault()">
+                                <input type="file" name="avatar" id="edit_profile_picture" style="display: none;" />
+                            <span class="col-12 text-center pt-3" ><h4>Welcome, {{ ucfirst($user->name) }} </h4></span>
+                        </div>
                     </div>
-                </div>
 
-                <form enctype="multipart/form-data" action="/profile" method="POST">@csrf
+                
                     <div class="form-group row ">
 
                         {{-- Form Input for Name --}}
@@ -38,7 +39,7 @@
                                 
                         </div>
                         <div class="col-sm-10 col-lg-7 p-0">                                                                              
-                            <input type="text" class="form-control text-small" id="name" placeholder="{{ucfirst($user->name)}}">
+                            <input type="text" class="form-control text-small" id="name" name="name" value="{{ucfirst($user->name)}}">
                         </div> 
                     </div>
 

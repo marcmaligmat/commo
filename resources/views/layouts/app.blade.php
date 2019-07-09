@@ -56,7 +56,7 @@
 	<!-- For Clicking photo to upload file -->
 	<script>
 			$("input[type='image']").click(function() {
-			$("input[id='my_file']").click();
+			$("input[id='edit_profile_picture']").click();
 		});
 	</script>
 

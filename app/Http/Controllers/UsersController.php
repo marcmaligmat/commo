@@ -44,9 +44,9 @@ class UsersController extends Controller
             $source = storage_path().'/app/public/uploads/avatars/'.$fileNameToStore;
             $target = public_path('/uploads/avatars/' . $fileNameToStore);
 
-            dd($source, $target);
+            //dd($source, $target);
 
-            Image::make($source)->fit(90, 90)->save($target);
+            Image::make($source)->resize(90, 90)->save($target);
         }
 
     }

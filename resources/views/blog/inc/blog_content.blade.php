@@ -35,7 +35,7 @@
 								<!-- Entry Image
 								============================================= -->
 								<div class="entry-image">
-									<a href="#"><img src="{{asset('images/blog/full/1.jpg')}}" alt="Blog Single"></a>
+									<a href="#"><img src="{{asset('/storage/blogs/'.str_replace(' ','-',$blog->title).'/main_pic.jpg')}}" alt="Blog Single"></a>
 								</div><!-- .entry-image end -->
 
 								<!-- Entry Content
@@ -204,7 +204,7 @@
 												<div class="comment-author vcard">
 
 													<span class="comment-avatar clearfix">
-													<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' /></span>
+													<img alt='' src='https://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60' class='avatar avatar-60 photo avatar-default' height='60' width='60' /></span>
 
 												</div>
 
@@ -236,7 +236,7 @@
 														<div class="comment-author vcard">
 
 															<span class="comment-avatar clearfix">
-															<img alt='' src='http://1.gravatar.com/avatar/30110f1f3a4238c619bcceb10f4c4484?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></span>
+															<img alt='' src='https://1.gravatar.com/avatar/30110f1f3a4238c619bcceb10f4c4484?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /></span>
 
 														</div>
 
@@ -271,7 +271,7 @@
 												<div class="comment-author vcard">
 
 													<span class="comment-avatar clearfix">
-													<img alt='' src='http://1.gravatar.com/avatar/30110f1f3a4238c619bcceb10f4c4484?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=G' class='avatar avatar-60 photo' height='60' width='60' /></span>
+													<img alt='' src='https://1.gravatar.com/avatar/30110f1f3a4238c619bcceb10f4c4484?s=60&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D60&amp;r=G' class='avatar avatar-60 photo' height='60' width='60' /></span>
 
 												</div>
 
@@ -279,7 +279,7 @@
 
 											<div class="comment-content clearfix">
 
-												<div class="comment-author"><a href='http://themeforest.net/user/semicolonweb' rel='external nofollow' class='url'>SemiColon</a><span><a href="#" title="Permalink to this comment">April 25, 2012 at 1:03 am</a></span></div>
+												<div class="comment-author"><a href='https://themeforest.net/user/semicolonweb' rel='external nofollow' class='url'>SemiColon</a><span><a href="#" title="Permalink to this comment">April 25, 2012 at 1:03 am</a></span></div>
 
 												<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
 
@@ -521,7 +521,7 @@
 													<img src="{{asset('images/portfolio/4/3.jpg')}}" alt="Mac Sunglasses">
 												</a>
 												<div class="portfolio-overlay">
-													<a href="http://vimeo.com/89396394" class="center-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>
+													<a href="https://vimeo.com/89396394" class="center-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>
 												</div>
 											</div>
 											<div class="portfolio-desc center nobottompadding">

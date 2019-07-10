@@ -7,6 +7,8 @@ use App\Blog;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
+use File;
+use Image;
 class BlogController extends Controller
 {
     public function __construct()
@@ -49,14 +51,51 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+        //check if blog creation has file for main pic
+        if($request->hasFile('main_pic') AND !empty($title = $request->get('title')))
+        {
+
+            $title = strtolower(str_replace(' ','-',$title));
+            $save_path = public_path()."/storage/blogs/".$title;
+   
+            // if(!File::exists($path)){
+            //     File::makeDirectory($path, 755, true);
+            // }
+
+            if (!file_exists($save_path)) {
+                mkdir($save_path, 755, true);
+            }
+
+
+            $main_pic = $request->file('main_pic');
+            $filename = 'main_pic.jpg';
+           // echo public_path('/storage/uploads/avatars/'. $filename);
+            Image::make($main_pic)->resize(400,300)->save( public_path('storage/blogs/'.$title.'/'.$filename));
+
+
+        }
+
+
+        $this->validate($request, [
+            'title' => 'required',
+            'main_pic' => 'required',
+            'body' => 'required',
+            'user_id' => 'required',
+        ]);
+
         //dd($request->all());
-        Blog::create([
+        $save = Blog::create([
             'title' => strtolower($request->get('title')),
             'body' => $request->get('body'),
             'user_id' => $request->get('user_id'),
         ]);
-
-        return redirect()->back();
+        
+        if($save){
+            return redirect()->back()->with('success', 'Blog Created');
+        } else {
+            return redirect()->back()->with('error', 'There was a problem');
+        }
+        
     }
 
     /**

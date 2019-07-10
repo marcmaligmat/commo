@@ -18,7 +18,10 @@
                     <div class="form-group row">
 
                         <label for="title" class=" col-form-label  mt-1">Title</label>                                  
-                        <input type="text" class="form-control" id="title" name="title" placeholder="" ">
+                        <input type="text" class="form-control" id="title" name="title" placeholder="">
+
+                        <label for="title" class=" col-form-label  mt-1">Main Pic</label>                                  
+                        <input type="file" class="form-control" id="main_pic" name="main_pic">
 
                         
                         

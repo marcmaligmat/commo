@@ -34,7 +34,11 @@
 		<!-- Header
 		============================================= -->
         @include('inc.header')
-       
+	   
+		<!-- Messages for SUCCESS OR ERRORS
+		============================================= -->
+		@include('inc.messages')
+
 		<!-- Content
 		============================================= -->
         @yield('content')

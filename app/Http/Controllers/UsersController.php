@@ -33,8 +33,8 @@ class UsersController extends Controller
             //$filename = time() . '.' . $avatar->getClientOriginalExtension();
            // echo public_path('/storage/uploads/avatars/'. $filename);
             Image::make($avatar)->resize(90,90)->save( public_path('storage/uploads/avatars/default.jpg'));
-            $user->avatar = $filename;
-            $user->save();
+            //$user->avatar = $filename;
+            //$user->save();
 
             return redirect('users')->with('success', "Image uploaded successfully.");
 

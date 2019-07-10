@@ -37,7 +37,7 @@
 						</div>
 						<div class="entry-c">
 							<div class="entry-title">
-								<h2><a href="/blog/posts/{{$blog->id}}/{{strtolower(str_replace(' ','-',$blog->title))}}">{{$blog->title}}</a></h2>
+								<h2><a href="/blog/posts/{{strtolower(str_replace(' ','-',$blog->title))}}">{{$blog->title}}</a></h2>
 							</div>
 							<ul class="entry-meta clearfix">
 								<li><i class="icon-calendar3"></i> {{date_format($blog->created_at,"d F Y")}}</li>
@@ -49,7 +49,7 @@
 							<div class="entry-content">
 								{!! str_limit($blog->body,300) !!}
 								<br>
-								<a href="/blog/posts/{{$blog->id}}/{{strtolower(str_replace(' ','-',$blog->title))}}" class="more-link">Read More</a>
+								<a href="/blog/posts/{{strtolower(str_replace(' ','-',$blog->title))}}" class="more-link">Read More</a>
 							</div>
 						</div>
 					</div>

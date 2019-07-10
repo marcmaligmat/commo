@@ -100,11 +100,11 @@ class BlogController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($title)
     {
-        //$title = $this->removeDash($title);
+        $title = $this->removeDash($title);
         //echo $title;
-        $blog =  Blog::where('id',$id)->first();
+        $blog =  Blog::where('title',$title)->first();
         
         return view('blog.show',compact('blog'));
     }

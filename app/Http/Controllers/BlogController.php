@@ -51,29 +51,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //check if blog creation has file for main pic
-        if($request->hasFile('main_pic') AND !empty($title = $request->get('title')))
-        {
 
-            $title = strtolower(str_replace(' ','-',$title));
-            $save_path = public_path()."/storage/blogs/".$title;
-   
-            // if(!File::exists($path)){
-            //     File::makeDirectory($path, 755, true);
-            // }
-
-            if (!file_exists($save_path)) {
-                mkdir($save_path, 755, true);
-            }
-
-
-            $main_pic = $request->file('main_pic');
-            $filename = 'main_pic.jpg';
-           // echo public_path('/storage/uploads/avatars/'. $filename);
-            Image::make($main_pic)->resize(400,300)->save( public_path('storage/blogs/'.$title.'/'.$filename));
-
-
-        }
 
 
         $this->validate($request, [
@@ -90,6 +68,24 @@ class BlogController extends Controller
             'user_id' => $request->get('user_id'),
         ]);
         
+
+        //check if blog creation has file for main pic
+        if($request->hasFile('main_pic') )
+        {
+            $save_path = public_path()."/storage/blogs/".$save->id;
+            if (!file_exists($save_path)) {
+                mkdir($save_path, 755, true);
+            }
+
+
+            $main_pic = $request->file('main_pic');
+            $filename = 'main_pic.jpg';
+            // echo public_path('/storage/uploads/avatars/'. $filename);
+            Image::make($main_pic)->resize(400,300)->save( public_path('storage/blogs/'.$save->id.'/'.$filename));
+
+
+        }
+
         if($save){
             return redirect()->back()->with('success', 'Blog Created');
         } else {
@@ -104,11 +100,11 @@ class BlogController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show($title)
+    public function show($id)
     {
-        $title = $this->removeDash($title);
+        //$title = $this->removeDash($title);
         //echo $title;
-        $blog =  Blog::where('title',$title)->first();
+        $blog =  Blog::where('id',$id)->first();
         
         return view('blog.show',compact('blog'));
     }

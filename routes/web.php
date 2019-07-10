@@ -27,7 +27,7 @@ Route::prefix('users')->group(function(){
     Route::post('/','UsersController@edit')->name('users.update');
 });
 Route::prefix('blog')->group(function(){
-    Route::get('/posts/{title}','BlogController@show');
+    Route::get('/posts/{id}','BlogController@show');
     Route::get('/create','BlogController@create');
     Route::post('/create','BlogController@store')->name('blog.store');
 });

@@ -35,7 +35,7 @@
 								<!-- Entry Image
 								============================================= -->
 								<div class="entry-image">
-									<a href="#"><img src="{{asset('/storage/blogs/'.str_replace(' ','-',$blog->title).'/main_pic.jpg')}}" alt="Blog Single"></a>
+									<a href="#"><img src="{{asset('/storage/blogs/'.$blog->id.'/main_pic.jpg')}}" alt="Blog Single"></a>
 								</div><!-- .entry-image end -->
 
 								<!-- Entry Content

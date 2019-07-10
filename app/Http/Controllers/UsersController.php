@@ -30,11 +30,11 @@ class UsersController extends Controller
 
 
             $avatar = $request->file('avatar');
-            //$filename = time() . '.' . $avatar->getClientOriginalExtension();
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
            // echo public_path('/storage/uploads/avatars/'. $filename);
-            Image::make($avatar)->resize(90,90)->save( public_path('storage/uploads/avatars/default.jpg'));
-            //$user->avatar = $filename;
-            //$user->save();
+            Image::make($avatar)->resize(90,90)->save( public_path('storage/uploads/avatars/'. $filename));
+            $user->avatar = $filename;
+            $user->save();
 
             return redirect('users')->with('success', "Image uploaded successfully.");
 

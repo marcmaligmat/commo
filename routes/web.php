@@ -34,4 +34,6 @@ Route::prefix('blog')->group(function(){
     Route::get('/posts/{title}','BlogController@show');
     Route::get('/create','BlogController@create');
     Route::post('/create','BlogController@store')->name('blog.store');
+
+    Route::get('/delete/{id}','BlogController@destroy');
 });

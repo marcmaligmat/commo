@@ -73,30 +73,52 @@
 
 
 
-
-
+                
+               
                 <div class="tab-content clearfix" id="tabs-6">
-                    <div class="table-responsive-md">
-                        <table class="table table-hover">
-                            <h1><a href="blog/create">Create Blog</a></h1>
-                            <thead>Title</thead>
-                            @foreach($user->blogs as $blog)
-                            <tr class="table-success text-big">
-                                <td> 
-                                    <a href="/blog/posts/{{strtolower(str_replace(' ','-',$blog->title))}}">{{$blog->title}}</a>
-                                    <span class="text-right">
-                                        <a href="/blog/edit/{{$blog->id}}">Edit</a>
-                                        <a href="">Delete</a>
-                                    </span>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </table>
-                    </div>
-                    
-                       
-                    
+                    <h1><a href="blog/create">Create Blog</a></h1>
+                    @if(count($user->blogs) > 0)
+                        <div class="table-responsive-md">
+                            <table class="table table-hover">
+                                
+                                <thead>Title</thead>
+                                @foreach($user->blogs as $blog)
+                                <tr class="table-success text-big">
+                                    <td> 
+                                        <a href="/blog/posts/{{strtolower(str_replace(' ','-',$blog->title))}}">{{$blog->title}}</a>
+                                        <span class="text-right">
+                                            <a href="/blog/edit/{{$blog->id}}">Edit</a>
+                                            <a href="#myModal1" data-lightbox="inline" class="">Delete</a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </table>
+
+                            <div class="container clearfix">
+
+
+                
+                                    <div class="" data-target="#myModal1"></div>
+                
+                                    <!-- Modal -->
+                                    <div class="modal1 mfp-hide" id="myModal1">
+                                        <div class="block divcenter" style="background-color: #FFF; max-width: 500px;">
+                                            <div class="center" style="padding: 50px;">
+                                                <h3>Delete blog</h3>
+                                                <p class="nobottommargin">Are you sure you want to delete?</p>
+                                            </div>
+                                            <div class="section center nomargin" style="padding: 30px;">
+                                                <a href="/blog/delete/{{$blog->id}}" class="btn btn-danger">Yes</a>
+                                                <a href="#" class="btn btn-primary" onClick="$.magnificPopup.close();return false;">No</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                        </div>
                 </div>
+                    @endif
                 <div class="tab-content clearfix" id="tabs-7">
                     <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
                     Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.

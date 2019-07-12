@@ -172,7 +172,7 @@ class BlogController extends Controller
     {
         $blog = Blog::find($id);
         $fileDirectory = public_path('storage/blogs/'.$id);
-        chown($fileDirectory,666);
+       
         $this->deleteDir($fileDirectory);
 
         if($blog->delete()){

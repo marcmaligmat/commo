@@ -6,26 +6,27 @@
     <div class="col-12 mt-5">
         <div class="cardshadow-sm">
             <div class="card-header">
-                <h4 class="mb-0">Create</h4>
+                <h4 class="mb-0">Update</h4>
             </div>
             <div class="card-body">
                 @if(!empty($success))
                     <div>{{var_dump($success)}}</div>
                 @endif
-                <form enctype="multipart/form-data" action="{{route('blog.store')}}" method="POST">@csrf
+                <form enctype="multipart/form-data" action="" method="POST">@csrf
                     <div class="form-group row">
                         <label for="title" class=" col-form-label  mt-1">Title</label>                                  
-                        <input type="text" class="form-control" id="title" name="title" placeholder="">
+                            <input type="text" class="form-control" id="title" name="title" value="{{$blog->title}}">
                         <label for="title" class=" col-form-label  mt-1">Main Pic</label>                                  
                         <input type="file" class="form-control" id="main_pic" name="main_pic">
-                        <label for="ckeditor" class=" col-form-label  mt-1">Blog Body</label>  
+                        <label for="ckeditor" class=" col-form-label  mt-1" >Blog Body</label>  
                         <div class='col-12 mx-0 px-0'>
-                            <textarea id ="ckeditor" class="form-control" name="body">
+                            <textarea id ="ckeditor" class="form-control" name="body" >
+                                    {{$blog->body}}
                             </textarea>
                         </div>
                     </div>
                     <div class="mx-0 px-0">
-                        <input type="submit" value="Create" class="mt-3 mx-auto btn  btn-primary" >
+                        <input type="submit" value="Update" class="mt-3 mx-auto btn  btn-primary" >
                     </div>
                     <input type="hidden" name="user_id" value="{{$user_id}}">
                 </form>

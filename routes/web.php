@@ -26,7 +26,11 @@ Route::prefix('users')->group(function(){
     Route::get('/','UsersController@index')->name('users.index');
     Route::post('/','UsersController@edit')->name('users.update');
 });
+
 Route::prefix('blog')->group(function(){
+    Route::get('/edit/{id}','BlogController@edit');
+    Route::post('/edit/{id}','BlogController@update');
+
     Route::get('/posts/{title}','BlogController@show');
     Route::get('/create','BlogController@create');
     Route::post('/create','BlogController@store')->name('blog.store');

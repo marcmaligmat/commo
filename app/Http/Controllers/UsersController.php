@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use Image;
+use Blog;
 class UsersController extends Controller
 {
     public function index()
     {
         $user = Auth::user();
-        return view('users.index',compact('user'));
+
+        return view('users.index')
+                ->with('user',$user)
+                //->with('blogs',$user->id->blogs)
+                ;
     
     }
 
@@ -18,12 +23,10 @@ class UsersController extends Controller
     {
         //echo $request->get('name');
 
-        if($request->hasFile('avatar'))
-        {
+        if($request->hasFile('avatar')){
             $user  = Auth::user();
             // Delete current image before uploading new image
-            if ($user->avatar != 'default.jpg') 
-            {
+            if ($user->avatar != 'default.jpg') {
                 $file = public_path('/storage/uploads/avatars/' . $user->avatar);
                 unlink($file);
             }
@@ -37,7 +40,6 @@ class UsersController extends Controller
             $user->save();
 
             return redirect('users')->with('success', "Image uploaded successfully.");
-
         }
 
     }

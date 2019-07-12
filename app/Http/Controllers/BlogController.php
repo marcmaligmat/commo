@@ -52,8 +52,6 @@ class BlogController extends Controller
     public function store(Request $request)
     {
 
-
-
         $this->validate($request, [
             'title' => 'required',
             'main_pic' => 'required',
@@ -115,9 +113,19 @@ class BlogController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blog $blog)
+    public function edit($id)
     {
-        //
+
+        if(!empty(Auth::user()->id)){
+            $blog =  Blog::where('id',$id)->first();
+            return view('blog.edit')
+                ->with('user_id', Auth::user()->id)
+                ->with('blog',$blog)
+                ;
+        } else {
+            return view('auth.login');
+        }
+
     }
 
     /**
@@ -127,9 +135,32 @@ class BlogController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(Request $request, $id)
     {
-        //
+        $blog = Blog::find($id);
+        $blog->body = $request->input('body');
+        $blog->title = $request->input('title');
+        
+        if($request->hasFile('main_pic')){
+            $save_path = public_path()."/storage/blogs/".$id;
+            if (!file_exists($save_path)) {
+                mkdir($save_path, 755, true);
+            }
+
+            $main_pic = $request->file('main_pic');
+            $filename = 'main_pic.jpg';
+            $fileDirectory = public_path('storage/blogs/'.$id.'/'.$filename);
+            unlink($fileDirectory);
+            // echo public_path('/storage/uploads/avatars/'. $filename);
+            Image::make($main_pic)->resize(400,300)->save($fileDirectory);
+        }
+
+
+        if($blog->save()){
+            return redirect()->back()->with('success', 'Blog Updated');
+        } else {
+            return redirect()->back()->with('error', 'There was a problem');
+        }
     }
 
     /**

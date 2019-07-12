@@ -72,7 +72,7 @@ class BlogController extends Controller
         {
             $save_path = public_path()."/storage/blogs/".$save->id;
             if (!file_exists($save_path)) {
-                mkdir($save_path, 755, true);
+                mkdir($save_path);
             }
 
 

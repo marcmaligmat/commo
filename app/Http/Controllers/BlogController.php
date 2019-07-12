@@ -79,8 +79,8 @@ class BlogController extends Controller
             $main_pic = $request->file('main_pic');
             $filename = 'main_pic.jpg';
             // echo public_path('/storage/uploads/avatars/'. $filename);
-            Image::make($main_pic)->resize(400,300)->save( chmod(public_path('storage/blogs/'.$save->id.'/'.$filename),755));
-
+            $newFile = Image::make($main_pic)->resize(400,300)->save( public_path('storage/blogs/'.$save->id.'/'.$filename));
+            chmod($newFile,755);
 
         }
 

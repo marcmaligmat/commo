@@ -173,7 +173,8 @@ class BlogController extends Controller
         $blog = Blog::find($id);
         $fileDirectory = public_path('storage/blogs/'.$id);
        
-        $this->deleteDir($fileDirectory);
+        File::deleteDirectory($fileDirectory);
+
 
         if($blog->delete()){
             return redirect()->back()->with('error', 'Blog Deleted');
@@ -191,21 +192,4 @@ class BlogController extends Controller
     }
 
 
-    private function deleteDir($dirPath) {
-        if (! is_dir($dirPath)) {
-            throw new InvalidArgumentException("$dirPath must be a directory");
-        }
-        if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
-            $dirPath .= '/';
-        }
-        $files = glob($dirPath . '*', GLOB_MARK);
-        foreach ($files as $file) {
-            if (is_dir($file)) {
-                self::deleteDir($file);
-            } else {
-                unlink($file);
-            }
-        }
-        rmdir($dirPath);
-    }
 }

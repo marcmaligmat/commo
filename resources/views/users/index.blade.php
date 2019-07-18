@@ -56,25 +56,6 @@
                     </form>
                 </div>{{-- ****************END PROFILE TAB ************* --}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-               
                 <div class="tab-content clearfix" id="tabs-6">
                     <h1><a href="blog/create">Create Blog</a></h1>
                     @if(count($user->blogs) > 0)

@@ -37,3 +37,23 @@ Route::prefix('blog')->group(function(){
 
     Route::get('/delete/{id}','BlogController@destroy');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//tests
+Route::get('image_sizing',function(){
+    return view('image_sizing');
+});
+
+Route::post('image_sizing','ImageSizing@update');

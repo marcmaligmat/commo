@@ -31,7 +31,7 @@ Route::prefix('blog')->group(function(){
     Route::get('/edit/{id}','BlogController@edit');
     Route::post('/edit/{id}','BlogController@update');
 
-    Route::get('/posts/{title}','BlogController@show');
+    Route::get('/posts/{title}','BlogController@show')->name('blog.show');
     Route::get('/create','BlogController@create');
     Route::post('/create','BlogController@store')->name('blog.store');
 

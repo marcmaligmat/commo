@@ -15,13 +15,14 @@
 	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="my.css" type="text/css" />
 
 	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<!-- Document Title
 	============================================= -->
-	<title>Page with Submenu | tubol</title>
+	<title>Tubol</title>
 
 </head>
 
@@ -29,11 +30,11 @@
 
 	<!-- Document Wrapper
 	============================================= -->
-	<div id="wrapper" class="clearfix">
+	<div id="" class="clearfix">
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="floating-header dark no-sticky">
+		<header id="header" class="floating-header  no-sticky">
 
 			<div id="header-wrap">
 
@@ -50,13 +51,22 @@
 
 					<!-- Primary Navigation
 					============================================= -->
-					<nav id="primary-menu">
+					<nav id="primary-menu" class="style-2">
+						<div class="d-flex justify-content-between">
+								<ul >
+									<li><a href=""><div>NEWS</div></a></li>
+									<li><a href=""><div>HOW TO BET</div></a></li>
+									<li><a href=""><div>Help</div></a></li>
+								</ul>
+		
+								<ul>
+									<li><a href=""><div>LOGIN</div></a></li>
+									<li><a href=""><div>REGISTER</div></a></li>
+									<li><a href=""><div class="bg-info px-3 ">0 Points</div></a></li>
+								</ul>
 
-						<ul>
-							<li><a href=""><div>LOGIN</div></a></li>
-							<li><a href=""><div>REGISTER</div></a></li>
-							<li><a class = ""href=""><div class="bg-danger px-3 ">0 Points</div></a></li>
-						</ul>
+						</div>
+
 
 
 					</nav><!-- #primary-menu end -->
@@ -65,43 +75,43 @@
 
 			</div>
 
-		</header><!-- #header end -->
+		</header>
+		<!-- #header end -->
 
 		<!-- Page Title
 		============================================= -->
 
 
 
-			<div class="section dark m-0 p-0" style="height: 140px;">
+			<!-- <div class="section dark m-0 p-0" style="height: 140px;">
 				<div class="container-fluid center clearfix vertical-middle">
 
-					<i class="i-plain i-xlarge icon-food2 divcenter bottommargin"></i>
+					<i class=divcenter bottommargin"></i>
 
 					<div class="slider-caption slider-caption-center">
 						<h2 data-animate="fadeInUp">BET NOW WIN LATER</h2>
-						<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">"Momentum poverty tackling fellows social impact. Expanding community ownership, future affiliate protect civil society. Bloomberg."</p>
 					</div>
 
 				</div>
 				<div class="video-wrap">
-					<video poster="images/videos/explore.jpg" preload="auto" loop autoplay muted>
-						<source src='images/videos/explore.mp4' type='video/mp4' />
-						<source src='images/videos/explore.webm' type='video/webm' />
+					<video poster="https://www.youtube.com/watch?v=aHrHb1x6GlQ" preload="auto" loop autoplay muted>
+
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/SZEflIVnhH8" frameborder="0" allowfullscreen></iframe>
 					</video>
 					<div class="video-overlay" style="background-color: rgba(0,0,0,0.35);"></div>
 				</div>
-			</div>
+			</div> -->
 
 
 		<!-- Page Sub Menu
 		============================================= -->
 		<div id="page-menu">
 
-			<div id="page-menu-wrap" class="bg-success">
+			<div id="page-menu-wrap" class="bg-primary">
 
 				<div class="container clearfix ">
 
-					<div class="menu-title"><span>E-SPORTS</span></div>
+					<div class="menu-title"><span>EZ WIN</span></div>
 
 					<nav>
 						<ul id="tab-1">
@@ -120,73 +130,231 @@
 
 			</div>
 
-		</div><!-- #page-menu end -->
+		</div>
+		<!-- #page-menu end -->
 
 		<!-- Content
 		============================================= -->
-		<section id="content">
-
-			<div class="container p-5">
-				<div class="col_half card col_last ">
-					<div class="card-header bg-primary text-white">MATCHES</div>
-					<div class="card-body">
-						<h5 class="card-title">CAGAYAN TUBOLIANS TOURNAMENT&nbsp;&nbsp;&nbsp;<span class="pull-right">July 21,2019</span></h5>
-						<div class="card p-3">
-							
-							Team Wyee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 wins
-							<br>
-							Team Fidoo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 win
-						</div>
-
-						<div class="card p-3 my-3">
-							
-							Team Wyee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 wins
-							<br>
-							Team Fidoo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 win
-						</div>
-
-
-						<div class="card p-3 my-3">
-						
-							Team Wyee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 wins
-							<br>
-							Team Fidoo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 win
-						</div>
-
-						<div class="card p-3 my-3">
-							
-							Team Wyee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 wins
-							<br>
-							Team Fidoo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 win
-						</div>
-						<div class="card p-3 my-3">
-						
-							Team Wyee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 wins
-							<br>
-							Team Fidoo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 win
-						</div>
-						<div class="card p-3 my-3">
-						
-							Team Wyee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 wins
-							<br>
-							Team Fidoo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 win
-						</div>
-						<div class="card p-3 my-3">
+		<section id="content" >
+			
+		
+				<div class="container pb-5 mb-0" >
+					<div class="d-flex">
+						<div class=" col-md-6 pt-5 mt-5">
 				
-							Team Wyee &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 wins
-							<br>
-							Team Fidoo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 win
+							<div class="container bg-light p-3 ">
+									<div class="text-center pb-4"><span class="font-weight-bold">Live Matches</span></div>
+								<div class="d-flex no-wrap justify-content-between align-items-center text-center small font-weight-bold pb-1">
+									<div class="col-md-2 p-0">TOURNAMENT</div>
+									<div class="col-md-2 p-0">MATCH-UP</div>
+									<div class="col-md-5 p-0">TEAM</div>
+									<div class="col-md-3 p-0">LIVE TIME</div>
+									
+								</div>
+				
+				
+								<div class="card shadow my-3">
+									<div class="d-flex no-wrap justify-content-between small align-items-center text-center card-link">
+										<div class="col-md-2 "><img src="my-images/esl-one.png"></div>
+										<div class="col-md-2 p-0">First Three</div>
+										<div class="col-md-2 p-0"><img src="my-images/secret.png" height="71" width="84">  Secret </div>
+										<div class="col-md-1 p-0">VS</div>
+										<div class="col-md-2 p-0"><img src="my-images/navi.png" height="71" width="84">  NaVi</div>
+										
+										<div class="col-md-2 text-danger"><span class="icon-line2-clock live">&nbsp;41:30m</span></div>
+										<div class="col-md-1 p-0 text-danger text-left live">LIVE</div>
+									</div>
+								</div>
+								
+								<div class="card shadow my-3">
+									<div class="d-flex no-wrap justify-content-between small align-items-center text-center card-link">
+										<div class="col-md-2 "><img src="my-images/esl-one.png"></div>
+										<div class="col-md-2 p-0">First Three</div>
+										<div class="col-md-2 p-0"><img src="my-images/secret.png" height="71" width="84">  Secret </div>
+										<div class="col-md-1 p-0">VS</div>
+										<div class="col-md-2 p-0"><img src="my-images/navi.png" height="71" width="84">  NaVi</div>
+										
+										<div class="col-md-2 text-danger"><span class="icon-line2-clock live">&nbsp;41:30m</span></div>
+										<div class="col-md-1 p-0 text-danger text-left live">LIVE</div>
+									</div>
+								</div>
+								<div class="card shadow my-3">
+									<div class="d-flex no-wrap justify-content-between small align-items-center text-center card-link">
+										<div class="col-md-2 "><img src="my-images/esl-one.png"></div>
+										<div class="col-md-2 p-0">First Three</div>
+										<div class="col-md-2 p-0"><img src="my-images/secret.png" height="71" width="84">  Secret </div>
+										<div class="col-md-1 p-0">VS</div>
+										<div class="col-md-2 p-0"><img src="my-images/navi.png" height="71" width="84">  NaVi</div>
+										
+										<div class="col-md-2 text-danger"><span class="icon-line2-clock live">&nbsp;41:30m</span></div>
+										<div class="col-md-1 p-0 text-danger text-left live">LIVE</div>
+									</div>
+								</div>
+								<div class="card shadow my-3">
+									<div class="d-flex no-wrap justify-content-between small align-items-center text-center card-link">
+										<div class="col-md-2 "><img src="my-images/esl-one.png"></div>
+										<div class="col-md-2 p-0">First Three</div>
+										<div class="col-md-2 p-0"><img src="my-images/secret.png" height="71" width="84">  Secret </div>
+										<div class="col-md-1 p-0">VS</div>
+										<div class="col-md-2 p-0"><img src="my-images/navi.png" height="71" width="84">  NaVi</div>
+										
+										<div class="col-md-2 text-danger"><span class="icon-line2-clock live">&nbsp;41:30m</span></div>
+										<div class="col-md-1 p-0 text-danger text-left live">LIVE</div>
+									</div>
+								</div>
+								<div class="card shadow my-3">
+									<div class="d-flex no-wrap justify-content-between small align-items-center text-center card-link">
+										<div class="col-md-2 "><img src="my-images/esl-one.png"></div>
+										<div class="col-md-2 p-0">First Three</div>
+										<div class="col-md-2 p-0"><img src="my-images/secret.png" height="71" width="84">  Secret </div>
+										<div class="col-md-1 p-0">VS</div>
+										<div class="col-md-2 p-0"><img src="my-images/navi.png" height="71" width="84">  NaVi</div>
+										
+										<div class="col-md-2 text-danger"><span class="icon-line2-clock live">&nbsp;41:30m</span></div>
+										<div class="col-md-1 p-0 text-danger text-left live">LIVE</div>
+									</div>
+								</div>
+
+								<div class="card shadow my-3 ">
+									<div class="d-flex no-wrap justify-content-between small align-items-center text-center card-link">
+										<div class="col-md-2 "><img src="my-images/esl-one.png"></div>
+										<div class="col-md-2 p-0">First Three</div>
+										<div class="col-md-2 p-0"><img src="my-images/secret.png" height="71" width="84">  Secret </div>
+										<div class="col-md-1 p-0">VS</div>
+										<div class="col-md-2 p-0"><img src="my-images/navi.png" height="71" width="84">  Navi</div>
+										
+										<div class="col-md-2 text-danger"><span class="icon-line2-clock live">&nbsp;41:30m</span></div>
+										<div class="col-md-1 p-0 text-danger text-left live">LIVE</div>
+									</div>
+								</div>
+				
+								<div class="card shadow my-3">
+									<div class="d-flex no-wrap justify-content-between small align-items-center text-center card-link">
+										<div class="col-md-2 "><img src="my-images/esl-one.png"></div>
+										<div class="col-md-2 p-0">First Three</div>
+										<div class="col-md-2 p-0"><img src="my-images/secret.png" height="71" width="84">  Secret </div>
+										<div class="col-md-1 p-0">VS</div>
+										<div class="col-md-2 p-0"><img src="my-images/navi.png" height="71" width="84">  Navi</div>
+										
+										<div class="col-md-2 text-danger"><span class="icon-line2-clock live">&nbsp;41:30m</span></div>
+										<div class="col-md-1 p-0 text-danger text-left live">LIVE</div>
+									</div>
+								</div>
+							</div>
+							<!-- <table>
+								<caption>Live Matches</caption>
+								<thead>
+									<tr class="text-center">
+									<th scope="col">TOURNAMENT</th>
+									<th scope="col">MATCH-UP</th>
+									<th scope="col" colspan="2">TEAM</th>
+									<th scope="col">LIVE TIME</th>
+									<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>ESL</td>
+										<td>First Three</td>
+										<td>Team Secret VS TEAM NaVi</td>
+										<td>41:30m</td>
+										<td>WATCH LIVE</td>
+				
+									</tr>
+				
+								</tbody>
+							</table> -->
 						</div>
+						
+						<div class=" col-md-6 pt-5 mt-5">
+				
+								<div class="container bg-light p-3 ">
+										<div class="text-center pb-4"><span class="font-weight-bold">Live Matches</span></div>
+									<div class="d-flex no-wrap justify-content-between align-items-center text-center small font-weight-bold pb-1">
+										<div class="col-md-2 p-0">TOURNAMENT</div>
+										<div class="col-md-2 p-0">MATCH-UP</div>
+										<div class="col-md-5 p-0">TEAM</div>
+										<div class="col-md-3 p-0">LIVE TIME</div>
+										
+									</div>
+				
+				
+									<div class="card shadow my-3">
+										<div class="d-flex no-wrap justify-content-between small align-items-center text-center card-link">
+											<div class="col-md-2 "><img src="my-images/esl-one.png"></div>
+											<div class="col-md-2 p-0">First Three</div>
+											<div class="col-md-2 p-0"><img src="my-images/secret.png" height="71" width="84">  Secret </div>
+											<div class="col-md-1 p-0">VS</div>
+											<div class="col-md-2 p-0"><img src="my-images/navi.png" height="71" width="84">  NaVi</div>
+											
+											<div class="col-md-2 text-danger"><span class="icon-line2-clock live">&nbsp;41:30m</span></div>
+											<div class="col-md-1 p-0 text-danger text-left live">LIVE</div>
+										</div>
+									</div>
+				
+									<div class="card shadow my-3 ">
+										<div class="d-flex no-wrap justify-content-between small align-items-center text-center card-link">
+											<div class="col-md-2 "><img src="my-images/esl-one.png"></div>
+											<div class="col-md-2 p-0">First Three</div>
+											<div class="col-md-2 p-0"><img src="my-images/secret.png" height="71" width="84">  Secret </div>
+											<div class="col-md-1 p-0">VS</div>
+											<div class="col-md-2 p-0"><img src="my-images/navi.png" height="71" width="84">  Navi</div>
+											
+											<div class="col-md-2 text-danger"><span class="icon-line2-clock live">&nbsp;41:30m</span></div>
+											<div class="col-md-1 p-0 text-danger text-left live">LIVE</div>
+										</div>
+									</div>
+				
+									<div class="card shadow my-3">
+										<div class="d-flex no-wrap justify-content-between small align-items-center text-center card-link">
+											<div class="col-md-2 "><img src="my-images/esl-one.png"></div>
+											<div class="col-md-2 p-0">First Three</div>
+											<div class="col-md-2 p-0"><img src="my-images/secret.png" height="71" width="84">  Secret </div>
+											<div class="col-md-1 p-0">VS</div>
+											<div class="col-md-2 p-0"><img src="my-images/navi.png" height="71" width="84">  Navi</div>
+											
+											<div class="col-md-2 text-danger"><span class="icon-line2-clock live">&nbsp;41:30m</span></div>
+											<div class="col-md-1 p-0 text-danger text-left live">LIVE</div>
+										</div>
+									</div>
+								</div>
+								<!-- <table>
+									<caption>Live Matches</caption>
+									<thead>
+										<tr class="text-center">
+										<th scope="col">TOURNAMENT</th>
+										<th scope="col">MATCH-UP</th>
+										<th scope="col" colspan="2">TEAM</th>
+										<th scope="col">LIVE TIME</th>
+										<th scope="col"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>ESL</td>
+											<td>First Three</td>
+											<td>Team Secret VS TEAM NaVi</td>
+											<td>41:30m</td>
+											<td>WATCH LIVE</td>
+				
+										</tr>
+				
+									</tbody>
+								</table> -->
+							</div>
+						
+					</div>
 				</div>
-			</div>
+			
 
 		</section><!-- #content end -->
 		<!-- Testimonials	
 		============================================= -->
-		<section>
-			<h3 class="center">Testimonials</h3>
+		<section class="bg-info">
+			
 
-			<div class="container">
+			<div class="container mt-5 ">
+					<h3 class="center pt-5">Testimonials</h3>
 				<div id="oc-testi" class="owl-carousel testimonials-carousel carousel-widget" data-margin="20" data-items-sm="1" data-items-md="2" data-items-xl="3">
 				
 					<div class="oc-item">
@@ -507,10 +675,13 @@
 	============================================= -->
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.js"></script>
+	<script src="my.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="js/functions.js"></script>
+
+	
 
 </body>
 </html>
